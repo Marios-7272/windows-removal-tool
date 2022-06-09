@@ -50,23 +50,38 @@ punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja
 #### Plan ogólny:
 
 1. poczekanie, aż skończy się diskcheck,
-2. zamontowanie sformatowanej poprzednio partycji w /boot
-3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!
-4. zainstalowanie z wykorzystaniem poprzednio zebranych danych.
-5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu
+2. zamontowanie sformatowanej poprzednio partycji w /boot,
+3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
+4. zainstalowanie systemu z wykorzystaniem poprzednio zebranych danych,
+5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu,
 6. reboot po raz wtóry
 
 Szczegółów i uwag brak.
 
 ### Część trzecia: autorskie OOBE
 
-1. uruchomienie i zalogowanie się użytkownika 
-2. autoegzekucja skryptu
-3. zamknięcie programu powitalnego dostarczonego przez dane distro
-4. stworzenie folderu /Dysk Właściwy jako zamiennika %systemdrive%
-5. rozpoczęcie przenoszenia plików
-6. czekanie na błąd: za mało miejsca
-7. zmniejszenie partycji Windowsa i zwiększenie partycji Linuxa
-8. powrót do punktu 5
-9. sudo apt install nazwa-programu
-10. odczyt konfiguracji poszczególnych programów i ich przeniesienie
+#### Plan ogólny:
+
+1. uruchomienie i zalogowanie się użytkownika,
+2. autoegzekucja skryptu,
+3. zamknięcie programu powitalnego dostarczonego przez dane distro,
+4. stworzenie folderu /Dysk Właściwy jako zamiennika %systemdrive%,
+5. rekreacja całej struktury folderów
+6. rozpoczęcie przenoszenia plików,
+7. czekanie na błąd: za mało miejsca,
+8. zatrzymanie kopiowania,
+9. zmniejszenie partycji Windowsa i zwiększenie partycji Linuxa,
+10. powrót do punktu 5,
+11. sudo apt install nazwa-programu, ale tylko natywne,
+12. odczyt konfiguracji poszczególnych programów i ich przeniesienie (w miarę możliwości rzecz jasna),
+13. instalacja WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów
+14. usunięcie resztek Windowsa i zagospodarowanie pustej przestrzeni
+15. załadowanie odpowiedniej konfiguracji użytkowników
+16. sudo apt update && sudo apt upgrade && reboot
+
+#### Szczegóły i uwagi:
+
+punkt 4: Jest to łatwa idea do zrozumienia. 
+punkty 5-10: Zwyczajne skopiowanie wyrzuciłony błąd, że za mało miejsca. 
+
+Mam nadzieję, że to na razie tyle.
