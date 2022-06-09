@@ -82,6 +82,7 @@ Szczegółów i uwag brak.
 #### Szczegóły i uwagi:
 
 punkt 4: Jest to łatwa idea do zrozumienia. 
+
 punkty 5-10: Zwyczajne skopiowanie wyrzuciłony błąd, że za mało miejsca. 
 
 Mam nadzieję, że to na razie tyle.
