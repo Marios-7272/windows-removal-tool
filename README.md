@@ -30,5 +30,15 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 13. reboot
 #### Szczegóły i wątpliwości: 
 ogólnie: .bat wystarczy, nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
+
 punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego przez nas szablonu.
-punkt 6: przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install program. Nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali.  
+
+punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install program. Nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali.  
+
+punkt 8: Nie wykluczam rozbicia tego na kilka plików
+
+punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/)
+
+punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
+
+### Część druga: 
