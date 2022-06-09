@@ -11,4 +11,6 @@ I am a Polish highschool student who can't code at all but daily drives Linux. T
 
 Inner workings:
 I imagine it to make these steps:
-1)
+1) ee
+2) ee
+3) ee
