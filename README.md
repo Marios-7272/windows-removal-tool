@@ -12,8 +12,11 @@ Ten program jest skierowany dla osób, które chcą rozpocząć swoją przygodę
 Jestem polskim uczniem liceum. Nie umiem programować, ale używam Linuxa na co dzień. To mój pierwszy projekt w życiu, będę popełniał masę błędów, więc proszę nie oczekiwać, że wszystko będzie poprawne, o łatwości zrozumienia i estetyce nie wspominając.
 
 ## Metoda działania:
+
 ### Część pierwsza: przygotowanie w Windowsie
+
 #### Plan ogólny:
+
 Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinna ona wykonywać następujące czynności:
 1. zapytać o uprawnienia administratora,
 2. pobrać .iso albo poprosić o wskazanie ścieżki wcześniej pobranego pliku,
@@ -28,17 +31,34 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 11. zmniejszyć rozmiar %systemdrive% o około 20GB,
 12. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
 13. reboot
+
 #### Szczegóły i wątpliwości: 
 ogólnie: .bat wystarczy, nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
 
 punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego przez nas szablonu.
 
-punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install program. Nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali.  
+punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali.  
 
-punkt 8: Nie wykluczam rozbicia tego na kilka plików
+punkt 8: Trzebaby to rozbić na dwa skrypty. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, drugi całą resztę. 
 
-punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/)
+punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip)
 
 punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
 
-### Część druga: 
+### Część druga: Instalacja Linuxa
+
+#### Plan ogólny:
+
+1. poczekanie, aż skończy się diskcheck,
+2. zamontowanie sformatowanej poprzednio partycji w /boot
+3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!
+4. zainstalowanie z wykorzystaniem poprzednio zebranych danych.
+5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu
+6. reboot po raz wtóry
+
+Szczegółów i uwag brak.
+
+### Część trzecia: autorskie OOBE
+
+1. uruchomienie i zalogowanie się użytkownika 
+2. autoegzekucja skryptu
