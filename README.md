@@ -11,6 +11,6 @@ I am a Polish highschool student who can't code at all but daily drives Linux. T
 
 Inner workings:
 I imagine it to make these steps:
-1) ee
-2) ee
-3) ee
+1. ask for admin privileages
+2. make a list of all installed programes
+3. ,,translate"
