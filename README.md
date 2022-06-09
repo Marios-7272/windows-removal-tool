@@ -62,3 +62,11 @@ Szczegółów i uwag brak.
 
 1. uruchomienie i zalogowanie się użytkownika 
 2. autoegzekucja skryptu
+3. zamknięcie programu powitalnego dostarczonego przez dane distro
+4. stworzenie folderu /Dysk Właściwy jako zamiennika %systemdrive%
+5. rozpoczęcie przenoszenia plików
+6. czekanie na błąd: za mało miejsca
+7. zmniejszenie partycji Windowsa i zwiększenie partycji Linuxa
+8. powrót do punktu 5
+9. sudo apt install nazwa-programu
+10. odczyt konfiguracji poszczególnych programów i ich przeniesienie
