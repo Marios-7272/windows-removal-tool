@@ -1,5 +1,5 @@
 # Windows removal tool
-# English
+# Polskie tłumaczenie znajduje się w READMEpl.md.
 Welcome to Windows removal tool site! This is a concept of a program which:
 - deletes Windows,
 - installs Linux,
