@@ -15,7 +15,7 @@ Jestem polskim uczniem liceum. Nie umiem programować, ale używam Linuxa na co 
 ### Część pierwsza: przygotowanie w Windowsie
 #### Plan ogólny:
 Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinna ona wykonywać następujące czynności:
-1. zapytać o uprawnienia admiistratora,
+1. zapytać o uprawnienia administratora,
 2. pobrać .iso albo poprosić o wskazanie ścieżki wcześniej pobranego pliku,
 3. stworzyć folder %systemdrive%\e (przecież to nie musi koniecznie być C:\),
 4. zapytać o nazwy użytkownika i ich hasła oraz o to który jest administratorem,
