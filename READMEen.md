@@ -30,7 +30,8 @@ The first part is preperations to overwrite Windows. I think it should look more
 12. create a bootable partition, onto which the installators image will be unpacked, the autoinstallation script copied and configs moved,
 13. reboot.
 
-#### Details and ?uwagi?
+#### Details and remarks
+
 generarily: .bat will do, maybe .py. There is no need for sophisticated GUI. The user will have to be happy with a frame made out of dashes and equasin signs.
 
 point 2: .iso has to be stock, it doesn't need to have any modifications. The autoinstall script will be made by this program basing on a given template.
@@ -43,4 +44,18 @@ point 10: I'm thinking about the usage of [MS-DOS mode by Endermanch](https://dl
 
 point 12: I know Ubuntu can do that. I also know not every distribution can do that.
 
-##
+### Part two: Linux installation
+
+#### General plan:
+
+1. wait until diskcheck finishes,
+2. mount the previously formated partition in /boot,
+3. create an ext4 partition mounted in / on which data will be written !from the end!,
+4. install the system with using previously collected data, 
+5. copy the appropriate script to the appropriate folder,
+6. reboot.
+
+No details and remarks.
+
+
+
