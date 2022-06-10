@@ -17,7 +17,7 @@ Jestem polskim uczniem liceum. Nie umiem programować, ale używam Linuxa na co 
 
 #### Plan ogólny:
 
-Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinna ona wykonywać następujące czynności:
+Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinna ona wyglądać mniej więcej tak:
 1. zapytać o uprawnienia administratora,
 2. pobrać .iso albo poprosić o wskazanie ścieżki wcześniej pobranego pliku,
 3. stworzyć folder %systemdrive%\e (przecież to nie musi koniecznie być C:\),
@@ -33,15 +33,15 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 13. reboot
 
 #### Szczegóły i wątpliwości: 
-ogólnie: .bat wystarczy, nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
+ogólnie: .bat wystarczy, ewentualnie .py. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
 
-punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego przez nas szablonu.
+punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
-punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali.  
+punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali. W ostateczności można chamsko przenieść folder z programem i danymi na dysk. 
 
 punkt 8: Trzebaby to rozbić na dwa skrypty. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, drugi całą resztę. 
 
-punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip)
+punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip). Dzięki temu komputer nie uruchomi Windowsa po reboocie.
 
 punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
 
@@ -54,7 +54,7 @@ punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja
 3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
 4. zainstalowanie systemu z wykorzystaniem poprzednio zebranych danych,
 5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu,
-6. reboot po raz wtóry
+6. reboot 
 
 Szczegółów i uwag brak.
 
@@ -74,14 +74,14 @@ Szczegółów i uwag brak.
 10. powrót do punktu 5,
 11. sudo apt install nazwa-programu, ale tylko natywne,
 12. odczyt konfiguracji poszczególnych programów i ich przeniesienie (w miarę możliwości rzecz jasna),
-13. instalacja WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów
-14. usunięcie resztek Windowsa i zagospodarowanie pustej przestrzeni
-15. załadowanie odpowiedniej konfiguracji użytkowników
-16. sudo apt update && sudo apt upgrade && reboot
+13. instalacja WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów,
+14. usunięcie resztek Windowsa i zagospodarowanie pustej przestrzeni,
+15. załadowanie odpowiedniej konfiguracji użytkowników,
+16. sudo apt update && sudo apt upgrade && reboot po raz wtóry
 
 #### Szczegóły i uwagi:
 
-punkt 4: Jest to łatwa idea do zrozumienia. 
+punkt 4: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS  
 
 punkty 5-10: Zwyczajne skopiowanie wyrzuciłony błąd, że za mało miejsca. 
 
