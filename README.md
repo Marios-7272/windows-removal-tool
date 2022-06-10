@@ -2,10 +2,10 @@
 Click [here](READMEen.md) for english translation.
 
 Witam na stronie Windows Removal Tool! Ta strona to pomysł na program, który ma za zadanie:
-- usunąć Windowsa
-- zainstalować Linuxa
-- przenieść dane użytkownika w nienarusszonym porządku,
-- zainstalować wszystkie poprzednio zainstalowane programy
+- usunąć Windowsa,
+- zainstalować Linuxa,
+- przenieść dane użytkownika w nienaruszonym stanie,
+- zainstalować wszystkie poprzednio zainstalowane programy.
 Ten program jest skierowany dla osób, które chcą rozpocząć swoją przygodę z Linuxem z kółkami treningowymi, albo chcą aby komputer ich babci działał na Linuxie, bo ma 6 lat i szkoda go jeszcze wyrzucać, albo chcą sprankować szkolnego informatyka.
 
 #### Zastrzeżenie
@@ -24,13 +24,13 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 4. zapytać o nazwy użytkownika i ich hasła oraz o to który jest administratorem,
 5. sporządzic listę wszystkich zainstalowanych programów,
 6. „przetłumaczyć” ją na coś co zrozumie linux (o tym więcej w szegółach),
-7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie (jeśli o w ogóle możliwe), itp.)
-8. zapisać to wszystko w %systemdrive%/e/cuś.cfg
+7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie (jeśli o w ogóle możliwe), itp.),
+8. zapisać to wszystko w %systemdrive%/e/cuś.cfg,
 9. zapytać o potwierdzenie,
 10. sformatować partycję z plikami rozruchowymi,
 11. zmniejszyć rozmiar %systemdrive% o około 20GB,
 12. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
-13. reboot
+13. reboot.
 
 #### Szczegóły i wątpliwości: 
 ogólnie: .bat wystarczy, ewentualnie .py. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
@@ -54,7 +54,7 @@ punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja
 3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
 4. zainstalowanie systemu z wykorzystaniem poprzednio zebranych danych,
 5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu,
-6. reboot 
+6. reboot.
 
 Szczegółów i uwag brak.
 
@@ -66,7 +66,7 @@ Szczegółów i uwag brak.
 2. autoegzekucja skryptu,
 3. zamknięcie programu powitalnego dostarczonego przez dane distro,
 4. stworzenie folderu /Dysk Właściwy jako zamiennika %systemdrive%,
-5. rekreacja całej struktury folderów
+5. rekreacja całej struktury folderów,
 6. rozpoczęcie przenoszenia plików,
 7. czekanie na błąd: za mało miejsca,
 8. zatrzymanie kopiowania,
@@ -77,11 +77,11 @@ Szczegółów i uwag brak.
 13. instalacja WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów,
 14. usunięcie resztek Windowsa i zagospodarowanie pustej przestrzeni,
 15. załadowanie odpowiedniej konfiguracji użytkowników,
-16. sudo apt update && sudo apt upgrade && reboot po raz wtóry
+16. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
 
 #### Szczegóły i uwagi:
 
-punkt 4: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS  
+punkt 4: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
 
 punkty 5-10: Zwyczajne skopiowanie wyrzuciłony błąd, że za mało miejsca. 
 
