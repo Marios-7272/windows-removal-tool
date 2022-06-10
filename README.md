@@ -6,7 +6,7 @@ Witam na stronie Windows Removal Tool! Ta strona to pomysł na program, który m
 - zainstalować Linuxa,
 - przenieść dane użytkownika w nienaruszonym stanie,
 - zainstalować wszystkie poprzednio zainstalowane programy.
-Ten program jest skierowany dla osób, które chcą rozpocząć swoją przygodę z Linuxem z kółkami treningowymi, albo chcą aby komputer ich babci działał na Linuxie, bo ma 6 lat i szkoda go jeszcze wyrzucać, albo chcą sprankować szkolnego informatyka.
+Jest on skierowany dla osób, które chcą rozpocząć swoją przygodę z Linuxem z kółkami treningowymi, albo chcą aby komputer ich babci działał na Linuxie, bo ma 6 lat i szkoda go jeszcze wyrzucać, albo chcą sprankować szkolnego informatyka.
 
 #### Zastrzeżenie
 Jestem polskim uczniem liceum. Nie umiem programować, ale używam Linuxa na co dzień. To mój pierwszy projekt w życiu, będę popełniał masę błędów, więc proszę nie oczekiwać, że wszystko będzie poprawne, o łatwości zrozumienia i estetyce nie wspominając.
@@ -25,23 +25,24 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 5. sporządzic listę wszystkich zainstalowanych programów,
 6. „przetłumaczyć” ją na coś co zrozumie linux (o tym więcej w szegółach),
 7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie (jeśli o w ogóle możliwe), itp.),
-8. zapisać to wszystko w %systemdrive%/e/cuś.cfg,
+8. zapisać to wszystko w %systemdrive%\e\cuś.cfg,
 9. zapytać o potwierdzenie,
-10. sformatować partycję z plikami rozruchowymi,
+10. sformatować partycję rozruchową,
 11. zmniejszyć rozmiar %systemdrive% o około 20GB,
 12. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
 13. reboot.
 
-#### Szczegóły i wątpliwości: 
+#### Szczegóły i uwagi: 
+
 ogólnie: .bat wystarczy, ewentualnie .py. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
 
 punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
-punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali. W ostateczności można chamsko przenieść folder z programem i danymi na dysk. 
+punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali. W ostateczności można chamsko przenieść folder z programem i danymi. 
 
-punkt 8: Trzebaby to rozbić na dwa skrypty. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, drugi całą resztę. 
+punkt 8: Trzebaby to rozbić na kilka skryptów. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, inne całą resztę. 
 
-punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip). Dzięki temu komputer nie uruchomi Windowsa po reboocie.
+punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); dzięki temu komputer nie uruchomi Windowsa po reboocie.
 
 punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
 
@@ -49,11 +50,11 @@ punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja
 
 #### Plan ogólny:
 
-1. poczekanie, aż skończy się diskcheck,
-2. zamontowanie sformatowanej poprzednio partycji w /boot,
-3. stworzenie partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
-4. zainstalowanie systemu z wykorzystaniem poprzednio zebranych danych,
-5. skopiowanie odpowiedniego skryptu do odpowiedniego folderu,
+1. poczekać, aż skończy się diskcheck,
+2. zamontować sformatowanej poprzednio partycji w /boot,
+3. stworzyć partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
+4. zainstalować systemu z wykorzystaniem poprzednio zebranych danych,
+5. skopiować odpowiedniego skryptu do odpowiedniego folderu,
 6. reboot.
 
 Szczegółów i uwag brak.
@@ -62,22 +63,21 @@ Szczegółów i uwag brak.
 
 #### Plan ogólny:
 
-1. uruchomienie i zalogowanie się użytkownika,
-2. autoegzekucja skryptu,
-3. zamknięcie programu powitalnego dostarczonego przez dane distro,
-4. stworzenie folderu /Dysk Właściwy jako zamiennika %systemdrive%,
-5. rekreacja całej struktury folderów,
-6. rozpoczęcie przenoszenia plików,
-7. czekanie na błąd: za mało miejsca,
-8. zatrzymanie kopiowania,
-9. zmniejszenie partycji Windowsa i zwiększenie partycji Linuxa,
-10. powrót do punktu 5,
-11. sudo apt install nazwa-programu, ale tylko natywne,
-12. odczyt konfiguracji poszczególnych programów i ich przeniesienie (w miarę możliwości rzecz jasna),
-13. instalacja WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów,
-14. usunięcie resztek Windowsa i zagospodarowanie pustej przestrzeni,
-15. załadowanie odpowiedniej konfiguracji użytkowników,
-16. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
+1. autoegzekucja skryptu,
+2. zamknąć program powitalny dostarczony przez dane distro,
+3. stworzyć folderu /Dysk Właściwy jako zamiennika %systemdrive%,
+4. rekreować całą strukturę folderów,
+5. rozpocząć przenoszenie plików,
+6. czekać na błąd: za mało miejsca,
+7. zatrzymać kopiowanie,
+8. zmniejszyć partycję Windowsa i zwiększyć partycję Linuxa,
+9. powrót do punktu 5,
+10. sudo apt install nazwa-programu, ale tylko natywne,
+11. odczytać konfigurację poszczególnych programów i jej przeniesienie (w miarę możliwości rzecz jasna),
+13. instalować WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów,
+13. usunąć resztki Windowsa i zagospodarować pustą przestrzeń,
+14. załadować odpowiednią konfigurację użytkowników, 
+15. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
 
 #### Szczegóły i uwagi:
 
