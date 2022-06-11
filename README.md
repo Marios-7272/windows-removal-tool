@@ -34,7 +34,7 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 
 #### Szczegóły i uwagi: 
 
-ogólnie: batch wystarczy ewentualnie coś innego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
+ogólnie: batch wystarczy ewentualnie coś innego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania. Dobrze byłoby zapakować to i podpisać to jako instalator.
 
 punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
