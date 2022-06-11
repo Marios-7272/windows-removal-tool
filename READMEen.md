@@ -30,7 +30,7 @@ The first part is preperations to overwrite Windows. I think it should look more
 12. create a bootable partition, onto which the installators image will be unpacked, the autoinstallation script copied and configs moved,
 13. reboot.
 
-#### Details and remarks
+#### Details and remarks:
 
 generarily: .bat will do, maybe .py. There is no need for sophisticated GUI. The user will have to be happy with a frame made out of dashes and equasin signs.
 
@@ -57,5 +57,30 @@ point 12: I know Ubuntu can do that. I also know not every distribution can do t
 
 No details and remarks.
 
+### Part three: Self-made OOBE
 
+#### General plan:
 
+1. autoexecute the script,
+2. close the welcoming program provided by the distro,
+3. create a folder /Dysk Właściwy as a replacement of %systemdrive%,
+4. recreate the whole folder structure,
+5. start moving the files,
+6. wait for error: "not enough space"
+7. stop copying,
+8. shrink the Windows' partition and expand Linux's partition,
+9. go back to point 5,
+10. sudo apt install name-of-the-program, but only the native ones,
+11. read configurations of particular programs and move it (what can be applied),
+12. install WINE, Bottles or whatever will be trendy and install appropriate programs,
+13. delete scraps of Windows and manage empty space,
+14. load the appropriate user configuration,
+15. sudo apt update && sudo apt upgrade && reboot one again.
+
+#### Details and remarks:
+
+point 4: It's an easily understandable idea, which makes it independant from NTFS
+
+points 5-10: Normal copying would throw a "not enough space" error.
+
+I hope that's all for now.
