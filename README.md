@@ -34,7 +34,7 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 
 #### Szczegóły i uwagi: 
 
-ogólnie: .bat wystarczy, ewentualnie .py. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
+ogólnie: batch wystarczy ewentualnie coś innego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania.
 
 punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
@@ -51,10 +51,10 @@ punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja
 #### Plan ogólny:
 
 1. poczekać, aż skończy się diskcheck,
-2. zamontować sformatowanej poprzednio partycji w /boot,
-3. stworzyć partycji ext4 zamontowanej w /, na której dane będą zapisywane !od końca!,
-4. zainstalować systemu z wykorzystaniem poprzednio zebranych danych,
-5. skopiować odpowiedniego skryptu do odpowiedniego folderu,
+2. zamontować sformatowaną poprzednio partycję w /boot,
+3. stworzyć partycję ext4 zamontowaną w /, na której dane będą zapisywane !od końca!,
+4. zainstalować system z wykorzystaniem poprzednio zebranych danych,
+5. skopiować odpowiedni skrypt do odpowiedniego folderu,
 6. reboot.
 
 Szczegółów i uwag brak.
@@ -65,7 +65,7 @@ Szczegółów i uwag brak.
 
 1. autoegzekwować skrypt,
 2. zamknąć program powitalny dostarczony przez dane distro,
-3. stworzyć folderu /Dysk Właściwy jako zamiennik %systemdrive%,
+3. stworzyć folder /Dysk Właściwy jako zamiennik %systemdrive%,
 4. rekreować całą strukturę folderów,
 5. rozpocząć przenoszenie plików,
 6. czekać na błąd „za mało miejsca”,
