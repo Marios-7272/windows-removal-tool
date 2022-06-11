@@ -7,7 +7,7 @@ Welcome to Windows removal tool site! This is a concept of a program which is su
 It is targeted to people who either want to start their Linux adventure with some training wheels or need their grandma's computer to run linux, because it is from 6 years ago and it would be a pitty to discard it yet, or want to prank school's IT guy. 
 
 #### Disclaimer:
-I am a Polish highschool student who can't code at all but daily drives Linux. This is my first project ever. I will make a ton of misakes, so please do not expect everything to be correct, let alone neat and easily understandable. 
+I am a Polish highschool student who can't code at all but uses Linux daily. This is my first project ever. I will make a ton of misakes, so please do not expect everything to be correct, let alone neat and easily understandable. 
 
 ## Inner workings:
 
