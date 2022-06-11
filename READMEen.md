@@ -25,9 +25,9 @@ The first part is preperations to overwrite Windows. I think it should look more
 7. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
 8. save all of it in %systemdrive%\e\sth.cfg,
 9. ask for confirmation,
-10. format the boot volume,
-11. shrink the %systemdrive% by about 20GB,
-12. create a bootable partition, onto which the installators image will be unpacked, the autoinstallation script copied and configs moved,
+10. shrink the %systemdrive% by about 20GB,
+11. create a bootable partition, onto which the installators image will be unpacked, the autoinstallation script copied and configs moved,
+12. format the boot volume,
 13. reboot.
 
 #### Details and remarks:
@@ -40,9 +40,9 @@ point 6: by "translating" i mean creating a scipt which will be all sudo apt ins
 
 point 8: It will be necesarry to split it into multiple scripts. One of them would contain only the information needed by the installator, the other ones all the rest.
 
-point 10: I'm thinking about the usage of [MS-DOS mode by Endermanch](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); this way the computer wont reboot into Windows.
+point 12: I'm thinking about the usage of [MS-DOS mode by Endermanch](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); this way the computer wont reboot into Windows.
 
-point 12: I know Ubuntu can do that. I also know not every distribution can do that.
+point 11: I know Ubuntu can do that. I also know not every distribution can do that.
 
 ### Part two: Linux installation
 
