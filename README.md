@@ -42,9 +42,9 @@ punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który b�
 
 punkt 8: Trzebaby to rozbić na kilka skryptów. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, inne całą resztę. 
 
-punkt 10: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); dzięki temu komputer nie uruchomi Windowsa po reboocie.
+punkt 12: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); dzięki temu komputer nie uruchomi Windowsa po reboocie.
 
-punkt 12: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
+punkt 11: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
 
 ### Część druga: Instalacja Linuxa
 
