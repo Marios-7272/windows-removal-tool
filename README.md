@@ -24,12 +24,12 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 4. zapytać o nazwy użytkownika i ich hasła oraz o to który jest administratorem,
 5. sporządzic listę wszystkich zainstalowanych programów,
 6. „przetłumaczyć” ją na coś co zrozumie linux (o tym więcej w szegółach),
-7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie (jeśli o w ogóle możliwe), itp.),
+7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie, itp.),
 8. zapisać to wszystko w %systemdrive%\e\cuś.cfg,
 9. zapytać o potwierdzenie,
-10. sformatować partycję rozruchową,
-11. zmniejszyć rozmiar %systemdrive% o około 20GB,
-12. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
+10. zmniejszyć rozmiar %systemdrive% o około 20GB,
+11. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
+12. sformatować partycję rozruchową,
 13. reboot.
 
 #### Szczegóły i uwagi: 
