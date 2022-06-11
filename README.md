@@ -63,18 +63,18 @@ Szczegółów i uwag brak.
 
 #### Plan ogólny:
 
-1. autoegzekucja skryptu,
+1. autoegzekwować skrypt,
 2. zamknąć program powitalny dostarczony przez dane distro,
-3. stworzyć folderu /Dysk Właściwy jako zamiennika %systemdrive%,
+3. stworzyć folderu /Dysk Właściwy jako zamiennik %systemdrive%,
 4. rekreować całą strukturę folderów,
 5. rozpocząć przenoszenie plików,
-6. czekać na błąd: za mało miejsca,
+6. czekać na błąd „za mało miejsca”,
 7. zatrzymać kopiowanie,
 8. zmniejszyć partycję Windowsa i zwiększyć partycję Linuxa,
 9. powrót do punktu 5,
 10. sudo apt install nazwa-programu, ale tylko natywne,
-11. odczytać konfigurację poszczególnych programów i jej przeniesienie (w miarę możliwości rzecz jasna),
-13. instalować WINE, Bottles, czy cokolwiek będzie na czasie i instalacja odpowiednich programów,
+11. odczytać konfigurację poszczególnych programów i przenieść ją (w miarę możliwości rzecz jasna),
+12. zainstalować WINE, Bottles, czy cokolwiek będzie na czasie i zainstalować odpowiednie programy,
 13. usunąć resztki Windowsa i zagospodarować pustą przestrzeń,
 14. załadować odpowiednią konfigurację użytkowników, 
 15. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
