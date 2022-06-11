@@ -32,7 +32,7 @@ The first part is preperations to overwrite Windows. I think it should look more
 
 #### Details and remarks:
 
-generarily: .bat will do, maybe .py. There is no need for sophisticated GUI. The user will have to be happy with a frame made out of dashes and equasin signs.
+generarily: .bat will do, maybe something else. There is no need for sophisticated GUI. The user will have to be happy with a frame made out of dashes and equasin signs. It would be nice to pack it into an installator.
 
 point 2: .iso has to be stock, it doesn't need to have any modifications. The autoinstall script will be made by this program basing on a given template.
 
