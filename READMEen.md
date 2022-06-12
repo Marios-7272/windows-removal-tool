@@ -67,30 +67,23 @@ point 15: I'm thinking about the usage of [MS-DOS mode by Endermanch](https://dl
 
 poionts 3,8: Copying data from the level of the installator will decrease drive's load. Linux's installator will put less stress than (if at all).
 
+point 7: It's an easily understandable idea, which makes it independant from NTFS
+
 ### Part three: Self-made OOBE
 
 #### General plan:
 
 1. autoexecute the script,
 2. close the welcoming program provided by the distro,
-3. 
-4. recreate the whole folder structure,
-5. start moving the files,
-6. wait for error: "not enough space"
-7. stop copying,
-8. shrink the Windows' partition and expand Linux's partition,
-9. go back to point 5,
-10. sudo apt install name-of-the-program, but only the native ones,
-11. read configurations of particular programs and move it (what can be applied),
-12. install WINE, Bottles or whatever will be trendy and install appropriate programs,
-13. delete scraps of Windows and manage empty space,
-14. load the appropriate user configuration,
-15. sudo apt update && sudo apt upgrade && reboot one again.
+3. sudo apt install name-of-the-program, but only the native ones,
+4. read configurations of particular programs and move it (what can be applied),
+5. install WINE, Bottles or whatever will be trendy and install appropriate programs,
+6. translate .lnk to .desktop
+7. load the appropriate user configuration,
+8. sudo apt update && sudo apt upgrade && reboot one again.
 
 #### Details and remarks:
 
-point 4: It's an easily understandable idea, which makes it independant from NTFS
-
-points 5-10: Normal copying would throw a "not enough space" error.
+None.
 
 I hope that's all for now.
