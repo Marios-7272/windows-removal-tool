@@ -37,7 +37,9 @@ Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinn
 
 #### Szczegóły i uwagi: 
 
-ogólnie: batch wystarczy ewentualnie coś innego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania. Dobrze byłoby zapakować to i podpisać to jako instalator.
+ogólnie: Batch wystarczy, ewentualnie coś prekompilowanego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania. Dobrze byłoby zapakować to i podpisać to jako instalator.
+
+punkt 2: Trzeba wiedzieć ile danych trzeba przegrać. Można do tego dodać 100MB na nasze skrypty.
 
 punkt 5: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
@@ -59,9 +61,15 @@ punkt 15: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://d
 4. usunąć partycję Windowsa,
 5. stworzyć partycję ext4 zamontowaną w /,
 6. zainstalować system z wykorzystaniem poprzednio zebranych danych,
-7. reboot.
+7. stworzyć folder /Dysk Właściwy jako zamiennik %systemdrive%,
+8. skopiować dane,
+9. reboot.
 
-punkt 3: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalator Linuxa obciąży dysk mniej (jeśli w ogóle) niż Windows. To przyspieszy najbardziej czasochłonny proces. 
+#### Szczegóły i uwagi:
+
+punkty 3, 8: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalator Linuxa obciąży dysk mniej (jeśli w ogóle) niż Windows. To przyspieszy najbardziej czasochłonny proces. 
+
+punkt 7: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
 
 ### Część trzecia: autorskie OOBE
 
@@ -69,17 +77,15 @@ punkt 3: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalat
 
 1. autoegzekwować skrypt,
 2. zamknąć program powitalny dostarczony przez dane distro,
-3. stworzyć folder /Dysk Właściwy jako zamiennik %systemdrive%,
-4. skopiować dane
-5. sudo apt install nazwa-programu, ale tylko natywne,
-6. odczytać konfigurację poszczególnych programów i przenieść ją (w miarę możliwości rzecz jasna),
-7. zainstalować WINE, Bottles, czy cokolwiek będzie na czasie i zainstalować odpowiednie programy,
-8. usunąć resztki Windowsa i zagospodarować pustą przestrzeń,
-9. załadować odpowiednią konfigurację użytkowników, 
-10. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
+3. sudo apt install nazwa-programu, ale tylko natywne,
+4. odczytać konfigurację poszczególnych programów i przenieść ją (w miarę możliwości rzecz jasna),
+5. zainstalować WINE, Bottles, czy cokolwiek będzie na czasie i zainstalować odpowiednie programy,
+6. przetłumaczyć .lnk na .desktop,
+7. załadować odpowiednią konfigurację użytkowników, 
+8. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
 
 #### Szczegóły i uwagi:
 
-punkt 3: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
+Póki co brak.
 
 Mam nadzieję, że to na razie tyle.
