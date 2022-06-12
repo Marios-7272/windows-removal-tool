@@ -62,7 +62,7 @@ punkt 15: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://d
 5. stworzyć partycję ext4 zamontowaną w /,
 6. zainstalować system z wykorzystaniem poprzednio zebranych danych,
 7. stworzyć folder /Dysk Właściwy jako zamiennik %systemdrive%,
-8. skopiować dane,
+8. skopiować dane z powrotem,
 9. reboot.
 
 #### Szczegóły i uwagi:
