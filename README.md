@@ -19,45 +19,49 @@ Jestem polskim uczniem liceum. Nie umiem programować, ale używam Linuxa na co 
 
 Pierwsza część to przygotowanie do nadpisania Windowsowa. Sądzę, że powinna ona wyglądać mniej więcej tak:
 1. zapytać o uprawnienia administratora,
-2. pobrać .iso albo poprosić o wskazanie ścieżki wcześniej pobranego pliku,
-3. stworzyć folder %systemdrive%\e (przecież to nie musi koniecznie być C:\),
-4. zapytać o nazwy użytkownika i ich hasła oraz o to który jest administratorem,
-5. sporządzic listę wszystkich zainstalowanych programów,
-6. „przetłumaczyć” ją na coś co zrozumie linux (o tym więcej w szegółach),
-7. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie, itp.),
-8. zapisać to wszystko w %systemdrive%\e\cuś.cfg,
-9. zapytać o potwierdzenie,
-10. zmniejszyć rozmiar %systemdrive% o około 20GB,
-11. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
-12. sformatować partycję rozruchową,
-13. reboot.
+2. przeskanować dysk w poszukiwaniu danych do przegrania,
+3. poprosić o wybór dysku do przegrania oraz oznaczyć go,
+4. sprawdzić, czy wystarczy miejsca,
+5. pobrać .iso albo poprosić o wskazanie ścieżki wcześniej pobranego pliku,
+6. stworzyć folder %systemdrive%\e (przecież to nie musi koniecznie być C:\),
+7. zapytać o nazwy użytkownika i ich hasła oraz o to który jest administratorem,
+8. sporządzic listę wszystkich zainstalowanych programów,
+9. „przetłumaczyć” ją na coś co zrozumie linux (o tym więcej w szegółach),
+10. sporządzić configi poszczególnych użytkowników (ułatwienia dostępu, tapety, kolory, układ ikon na pulpicie, itp.),
+11. zapisać to wszystko w %systemdrive%\e\cuś.cfg,
+12. zapytać o potwierdzenie,
+13. zmniejszyć rozmiar %systemdrive% o około 20GB,
+14. stworzyć uruchamialną partycję, na którą zostanie wypakowany obraz instalatora, przeniesiony skrypt autoinstalacji oraz configi,
+15. sformatować partycję rozruchową,
+16. reboot.
 
 #### Szczegóły i uwagi: 
 
 ogólnie: batch wystarczy ewentualnie coś innego. Nie potrzeba nie wiem jakiego GUI. Użytkownik będzie się musiał zadowolić ramką z myślników i znaków równania. Dobrze byłoby zapakować to i podpisać to jako instalator.
 
-punkt 2: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
+punkt 5: .iso ma być seryjne, nie musi posiadać żadnych modyfikacji. Skrypt do autoinstalacji będzie sporządzał ten program na podstawie dostarczonego szablonu.
 
-punkt 6: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali. W ostateczności można chamsko przenieść folder z programem i danymi. 
+punkt 9: Przez „przetłumaczenie” mam na myśli stworzenie skryptu który będzie się w całości składał z sudo apt install nazwa-programu. Ponadto nie wszystko dostępne na Windowsie jest na Linuxie. W takiej sytuacji trzeba będzie wejść w %systemdrive%\Program Files albo Program Files (x86)\cokolwiek-to-ma-być, skopiować wszystkie pliki, zrobić co w naszej mocy i modlić się o to, że WINE lub Proton to odpali. W ostateczności można chamsko przenieść folder z programem i danymi. 
 
-punkt 8: Trzebaby to rozbić na kilka skryptów. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, inne całą resztę. 
+punkt 11: Trzebaby to rozbić na kilka skryptów. Jeden z nich zawierałby wyłącznie informacje dotyczące instalatora, inne całą resztę. 
 
-punkt 12: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); dzięki temu komputer nie uruchomi Windowsa po reboocie.
+punkt 14: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
 
-punkt 11: Wiem, że Ubuntu tak może. Wiem również, że nie każda dystrybucja tak może.
+punkt 15: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); dzięki temu komputer nie uruchomi Windowsa po reboocie.
 
-### Część druga: Instalacja Linuxa
+### Część druga: Instalacja Linuxa i kopiowanie
 
 #### Plan ogólny:
 
 1. poczekać, aż skończy się diskcheck,
 2. zamontować sformatowaną poprzednio partycję w /boot,
-3. stworzyć partycję ext4 zamontowaną w /, na której dane będą zapisywane !od końca!,
-4. zainstalować system z wykorzystaniem poprzednio zebranych danych,
-5. skopiować odpowiedni skrypt do odpowiedniego folderu,
-6. reboot.
+3. skopiować dane na wcześniej wybrany dysk,
+4. usunąć partycję Windowsa,
+5. stworzyć partycję ext4 zamontowaną w /,
+6. zainstalować system z wykorzystaniem poprzednio zebranych danych,
+7. reboot.
 
-Szczegółów i uwag brak.
+punkt 3: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalator Linuxa obciąży dysk mniej (jeśli w ogóle) niż Windows. To przyspieszy najbardziej czasochłonny proces. 
 
 ### Część trzecia: autorskie OOBE
 
@@ -66,23 +70,16 @@ Szczegółów i uwag brak.
 1. autoegzekwować skrypt,
 2. zamknąć program powitalny dostarczony przez dane distro,
 3. stworzyć folder /Dysk Właściwy jako zamiennik %systemdrive%,
-4. rekreować całą strukturę folderów,
-5. rozpocząć przenoszenie plików,
-6. czekać na błąd „za mało miejsca”,
-7. zatrzymać kopiowanie,
-8. zmniejszyć partycję Windowsa i zwiększyć partycję Linuxa,
-9. powrót do punktu 5,
-10. sudo apt install nazwa-programu, ale tylko natywne,
-11. odczytać konfigurację poszczególnych programów i przenieść ją (w miarę możliwości rzecz jasna),
-12. zainstalować WINE, Bottles, czy cokolwiek będzie na czasie i zainstalować odpowiednie programy,
-13. usunąć resztki Windowsa i zagospodarować pustą przestrzeń,
-14. załadować odpowiednią konfigurację użytkowników, 
-15. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
+4. skopiować dane
+5. sudo apt install nazwa-programu, ale tylko natywne,
+6. odczytać konfigurację poszczególnych programów i przenieść ją (w miarę możliwości rzecz jasna),
+7. zainstalować WINE, Bottles, czy cokolwiek będzie na czasie i zainstalować odpowiednie programy,
+8. usunąć resztki Windowsa i zagospodarować pustą przestrzeń,
+9. załadować odpowiednią konfigurację użytkowników, 
+10. sudo apt update && sudo apt upgrade && reboot po raz wtóry.
 
 #### Szczegóły i uwagi:
 
-punkt 4: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
-
-punkty 5-10: Zwyczajne skopiowanie wyrzuciłony błąd, że za mało miejsca. 
+punkt 3: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
 
 Mam nadzieję, że to na razie tyle.
