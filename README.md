@@ -67,7 +67,7 @@ punkt 15: Rozważam wykożystanie [trybu MS-DOS autorstwa Endermancha](https://d
 
 #### Szczegóły i uwagi:
 
-punkty 3, 8: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalator Linuxa obciąży dysk mniej (jeśli w ogóle) niż Windows. To przyspieszy najbardziej czasochłonny proces. 
+punkty 3, 8: Kopiowanie z poziomu instalatora zmniejszy obciążenie dysku. Instalator Linuxa obciąży dysk mniej niż Windows (jeśli w ogóle). To przyspieszy najbardziej czasochłonny proces. 
 
 punkt 7: Jest to łatwa idea do zrozumienia, która uniezależnia od NTFS.
 
