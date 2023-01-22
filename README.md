@@ -5,6 +5,7 @@ Welcome to the Windows Removal Tool site! This is a concept of a program which i
 - help with distro selection
 - move all the user data while keping it intact,
 - install all the previously present programs.
+
 It is targeted to people who either want to start their Linux adventure with some training wheels or need their grandma's computer to run linux, because it is 10 years old and it would be a pitty to discard it yet, or want to prank school's IT guy, or are the IT guy themselves and want automation.  
 
 #### Disclaimer:
