@@ -36,6 +36,7 @@ The first part is preperations to overwrite Windows. I think it should look more
   if yes: proceed to 16
   if no: slect a drive and do a backup
 16. 'Do you have a thumb drive with nothing important on it?'
+
   if yes: use the thumb drive
   if no: 
     diskpart
