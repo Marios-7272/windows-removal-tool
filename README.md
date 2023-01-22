@@ -86,7 +86,8 @@ none
 1. elevate
 2. apply userconfig
 3. copy everything
-4. 
+4. apply programconfig
+5. chill
 
 #### Details and remarks:
 
