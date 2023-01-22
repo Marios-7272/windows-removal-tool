@@ -89,7 +89,7 @@ none
 4. apply programconfig
 5.:
 
-    sudo apt update && sudo apt upgrade -y && reboot
+      sudo apt update && sudo apt upgrade -y && reboot
 
 #### Details and remarks:
 
