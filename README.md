@@ -23,15 +23,17 @@ The first part is preperations to overwrite Windows. I think it should look more
 4. program compatibility check
 5. create %systemdrive%\e (it doesn't always have to be C:\),
 6. ask about usernames and their passwords and which is the administrator,
-7. make a list of all installed programes,
-8. "translate" them to something linux understands (again, the details),
-9. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
-10. save it all in %systemdrive%\e\sth.cfg,
-11. ask for confirmation,
-12. 'Did you back up all your data?'
-  if yes: proceed to 13
-  if no: open default backup software and display message 'This window can be minimized now.' and a 'My backup is done.' button
-13. 'Do you have a thumb drive with nothing important on it?'
+7. fetch time, date, device name,
+8. save in %systemdrive%\e\systemconfig.cfg 
+9. make a list of all installed programes,
+10. "translate" them to something linux understands (again, the details),
+11. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
+12. save in %systemdrive%\e\userconfig.cfg,
+13. ask for confirmation,
+14. 'Did you back up all your data?'
+  if yes: proceed to 15
+  if no: slect a drive and do a backup
+15. 'Do you have a thumb drive with nothing important on it?'
   if yes: use the thumb drive
   if no: 
     diskpart
@@ -41,39 +43,33 @@ The first part is preperations to overwrite Windows. I think it should look more
       if error:
       cre par pri size= k* 1024
     assign letter l
-14. download iso 
-15. unpack (fat32 partiton)/burn .iso
-16. modify the copy
-17. add Linux to boot options
-18. remove Windows from boot options
+16. download iso
+17. unpack (fat32 partiton)/burn .iso
+18. modify the copy (includes copying %systemdrive%/e)
+19. add Linux to boot options
+20. remove Windows from boot options
 
 #### Details and remarks:
 
-generarily: .bat will do, maybe something precompiled. There is no need for sophisticated GUI. The user will have to be happy with a frame made out of dashes and equasin signs. It would be nice to pack it into an installator.
+point 3: In this section I want the program to explain what is a distro, show basic info and a ton of screenshots from various places and apps, all standardized.
 
-point 15: .iso has to be stock, it doesn't need to have any modifications. An autoinstall script will be made by this program based/basing on a given template (plis help my english).
+point 4: A searchbox and a status: 'good', 'janky', 'forget about it' and most popular equivalents.
 
-point 9: by "translating" i mean creating a scipt which will be all sudo apt install programs-name. Furthermore not everything availible on Windows will be availible on Linux. In this situation it will be needed to go to %systemdrive%\Program Files or Program Files (x86)\whatever-it-is-supposed-to-be, copy all the files, do all we can and prey that WINE or Proton will run it. 
+point 10: By 'translating' I mean creating a scipt which will be all sudo apt install programs-name. Furthermore not everything availible on Windows will be availible on Linux. In this situation we will need to copy %systemdrive%\Program Files or Program Files (x86)\whatever-it-is and prey that WINE or Proton will run it. 
 
-point 11: It will be necesarry to split it into multiple scripts. One of them would contain only the information needed by the installator, the other ones all the rest.
+point 18: .iso has to be stock, it doesn't need to have any modifications. An autoinstall script will be made by this program based/basing on a given template (plis help my english).
 
-point 14: I know Ubuntu can do that. I also know not every distribution can do that.
-
-point 15: I'm thinking about the usage of [MS-DOS mode by Endermanch](https://dl.malwarewatch.org/multipurpose/) (Windows10DOS.zip); this way the computer wont reboot into Windows.
+point 18 again: I know Ubuntu can do that. I also know not every distribution can do that.
 
 ### Part two: Linux installation
 
 #### General plan:
 
 1. wait until diskcheck finishes,
-2. mount the previously formated partition in /boot,
-3. copy the data on the previously slected drive,
-4. delete Windows' partition,
-5. create an ext4 partition mounted in / on which data will be written !from the end!,
-6. install the system with using previously collected data, 
-7. create a folder /Dysk Właściwy as a replacement of %systemdrive%,
-8. copy the data back,
-9. reboot.
+2. format 
+3. install
+4. copy
+5. apply systemconfig 
 
 #### Details and remarks:
 
