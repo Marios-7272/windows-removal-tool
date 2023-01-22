@@ -38,7 +38,9 @@ The first part is preperations to overwrite Windows. I think it should look more
 16. 'Do you have a thumb drive with nothing important on it?'
 
   if yes: use the thumb drive
+
   if no: 
+ 
     diskpart
     sel vol=%systemdrive%
     shrink desired=k* 1024 where k is a natural number determined by the size of the iso file
