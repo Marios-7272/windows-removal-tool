@@ -87,7 +87,9 @@ none
 2. apply userconfig
 3. copy everything
 4. apply programconfig
-5. chill
+5.:
+
+    sudo apt update && sudo apt upgrade -y && reboot
 
 #### Details and remarks:
 
