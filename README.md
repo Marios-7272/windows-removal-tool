@@ -27,13 +27,14 @@ The first part is preperations to overwrite Windows. I think it should look more
 8. save in %systemdrive%\e\systemconfig.cfg 
 9. make a list of all installed programes,
 10. "translate" them to something linux understands (again, the details),
-11. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
-12. save in %systemdrive%\e\userconfig.cfg,
-13. ask for confirmation,
-14. 'Did you back up all your data?'
-  if yes: proceed to 15
+11. save in %systemdrive%\e\programconfig.cfg
+12. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
+13. save in %systemdrive%\e\userconfig.cfg,
+14. ask for confirmation,
+15. 'Did you back up all your data?'
+  if yes: proceed to 16
   if no: slect a drive and do a backup
-15. 'Do you have a thumb drive with nothing important on it?'
+16. 'Do you have a thumb drive with nothing important on it?'
   if yes: use the thumb drive
   if no: 
     diskpart
@@ -43,11 +44,11 @@ The first part is preperations to overwrite Windows. I think it should look more
       if error:
       cre par pri size= k* 1024
     assign letter l
-16. download iso
-17. unpack (fat32 partiton)/burn .iso
-18. modify the copy (includes copying %systemdrive%/e)
-19. add Linux to boot options
-20. remove Windows from boot options
+17. download iso
+18. unpack (fat32 partiton)/burn .iso
+19. modify the copy (includes copying %systemdrive%/e)
+20. add Linux to boot options
+21. remove Windows from boot options
 
 #### Details and remarks:
 
@@ -68,27 +69,20 @@ point 18 again: I know Ubuntu can do that. I also know not every distribution ca
 1. wait until diskcheck finishes,
 2. format 
 3. install
-4. copy
-5. apply systemconfig 
+4. apply systemconfig 
 
 #### Details and remarks:
 
-poionts 3,8: Copying data from the level of the installator will decrease drive's load. Linux's installator will put less stress than (if at all).
-
-point 7: It's an easily understandable idea, which makes it independant from NTFS
+none
 
 ### Part three: Self-made OOBE
 
 #### General plan:
 
-1. autoexecute the script,
-2. close the welcoming program provided by the distro,
-3. sudo apt install name-of-the-program, but only the native ones,
-4. read configurations of particular programs and move it (what can be applied),
-5. install WINE, Bottles or whatever will be trendy and install appropriate programs,
-6. translate .lnk to .desktop
-7. load the appropriate user configuration,
-8. sudo apt update && sudo apt upgrade && reboot one again.
+1. elevate
+2. apply userconfig
+3. copy everything
+4. 
 
 #### Details and remarks:
 
