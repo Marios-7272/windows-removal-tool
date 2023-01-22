@@ -18,24 +18,24 @@ I am a Polish highschool student who can't code at all but uses Linux daily. Thi
 #### General plan:
 
 The first part is preperations to overwrite Windows. I think it should look more or less like this:
-1. elevate
-2. ask whether to dualboot or singleboot
-3. distro selection (look at the details)
-4. program compatibility check
+1. elevate,
+2. ask whether to dualboot or singleboot,
+3. distro selection (look at the details),
+4. program compatibility check,
 5. create %systemdrive%\e (it doesn't always have to be C:\),
 6. ask about usernames and their passwords and which is the administrator,
-7. fetch time, date, device name,
-8. save in %systemdrive%\e\systemconfig.cfg 
+7. fetch time, date, device name, language,
+8. save in %systemdrive%\e\systemconfig.cfg,
 9. make a list of all installed programes,
 10. "translate" them to something linux understands (again, the details),
-11. save in %systemdrive%\e\programconfig.cfg
+11. save in %systemdrive%\e\programconfig.cfg,
 12. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
 13. save in %systemdrive%\e\userconfig.cfg,
 14. ask for confirmation,
-15. 'Did you back up all your data?'
+15. 'Did you back up all your data?',
   if yes: proceed to 16
   if no: slect a drive and do a backup
-16. 'Do you have a thumb drive with nothing important on it?'
+16. 'Do you have a thumb drive with nothing important on it?',
 
   if yes: use the thumb drive
 
@@ -48,11 +48,11 @@ The first part is preperations to overwrite Windows. I think it should look more
       if error:
       cre par pri size= k* 1024
     assign letter l
-17. download iso
-18. unpack (fat32 partiton)/burn .iso
-19. modify the copy (includes copying %systemdrive%/e)
-20. add Linux to boot options
-21. remove Windows from boot options
+17. download iso,
+18. unpack (fat32 partiton)/burn .iso,
+19. modify the copy (includes copying %systemdrive%/e),
+20. add Linux to boot options,
+21. remove Windows from boot options,
 
 #### Details and remarks:
 
@@ -71,9 +71,9 @@ point 18 again: I know Ubuntu can do that. I also know not every distribution ca
 #### General plan:
 
 1. wait until diskcheck finishes,
-2. format 
-3. install
-4. apply systemconfig 
+2. format,
+3. install,
+4. apply systemconfig,
 
 #### Details and remarks:
 
@@ -83,16 +83,14 @@ none
 
 #### General plan:
 
-1. elevate
-2. apply userconfig
-3. copy everything
-4. apply programconfig
-5.:
-
-      sudo apt update && sudo apt upgrade -y && reboot
+1. elevate,
+2. apply userconfig,
+3. copy everything,
+4. apply programconfig,
+5. update and reboot,
 
 #### Details and remarks:
 
-None.
+none
 
 I hope that's all for now.
