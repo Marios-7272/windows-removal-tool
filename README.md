@@ -29,7 +29,7 @@ The first part is preperations to overwrite Windows. I think it should look more
 9. make a list of all installed programes,
 10. "translate" them to something linux understands (again, the details),
 11. save in %systemdrive%\e\programconfig.cfg,
-12. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout (if it is entirely possible), etc.),
+12. make configs of particular users (ease of access, wallpapers, colors, desktop icon layout),
 13. save in %systemdrive%\e\userconfig.cfg,
 14. ask for confirmation,
 15. 'Did you back up all your data?',
