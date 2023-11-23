@@ -9,7 +9,7 @@ Welcome to the Windows Removal Tool site! This is a concept of a program which i
 It is targeted to people who either want to start their Linux adventure with some training wheels or need their grandma's computer to run linux, because it is 10 years old and it would be a pitty to discard it yet, or want to prank school's IT guy, or are the IT guy themselves and want automation.  
 
 #### Disclaimer:
-I am a Polish highschool student who can't code at all but uses Linux daily. This is my first project ever. I will make a ton of misakes, so please do not expect everything to be correct, let alone neat and easily understandable. 
+I am a Polish student who can't code at all but uses Linux daily. This is my first project ever. I will make a ton of misakes, so please do not expect everything to be correct, let alone neat and easily understandable. 
 
 ## Inner workings:
 
@@ -64,7 +64,7 @@ point 10: By 'translating' I mean creating a scipt which will be all sudo apt in
 
 point 18: .iso has to be stock, it cannot have any modifications regarding self installation. An autoinstall script will be made by this program based/basing on a given template (plis help my english).
 
-point 18 again: I know Ubuntu can do that. I also know not every distribution can do that.
+point 18 again: I know Ubuntu can do that. I also know that not every distribution can do that.
 
 ### Part two: Linux installation
 
