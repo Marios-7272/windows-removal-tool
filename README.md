@@ -62,7 +62,7 @@ point 4: A searchbox and a status: 'good', 'janky', 'forget about it' and most p
 
 point 10: By 'translating' I mean creating a scipt which will be all sudo apt install programs-name. Furthermore not everything availible on Windows will be availible on Linux. In this situation we will need to copy %systemdrive%\Program Files or Program Files (x86)\whatever-it-is and prey that WINE or Proton will run it. 
 
-point 18: .iso has to be stock, it doesn't need to have any modifications. An autoinstall script will be made by this program based/basing on a given template (plis help my english).
+point 18: .iso has to be stock, it cannot have any modifications regarding self installation. An autoinstall script will be made by this program based/basing on a given template (plis help my english).
 
 point 18 again: I know Ubuntu can do that. I also know not every distribution can do that.
 
